@@ -1,3 +1,5 @@
 node_modules
 dist
-.vscode/
+/.vscode/
+/.stylelintrc.json
+eslint.config.mjs
