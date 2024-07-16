@@ -1,3 +1,4 @@
+import path from "path";
 
 export default {
     clearMocks: true,
@@ -7,7 +8,9 @@ export default {
     moduleDirectories: [
         "node_modules"
     ],
-
+    modulePaths: [
+        '<rootDir>src'
+    ],
     moduleFileExtensions: [
         "js",
         "jsx",
@@ -21,6 +24,11 @@ export default {
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    },
     // automock: false,
 
     // bail: 0,
