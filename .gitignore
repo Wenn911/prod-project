@@ -3,3 +3,4 @@ dist
 /.vscode/
 /.stylelintrc.json
 eslint.config.mjs
+*storybook.log
