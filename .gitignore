@@ -2,5 +2,6 @@ node_modules
 dist
 /.vscode/
 /.stylelintrc.json
-eslint.config.mjs
+# eslint.config.mjs
 *storybook.log
+/storybook-static
