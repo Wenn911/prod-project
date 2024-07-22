@@ -1,7 +1,8 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { Button, ButtonTheme } from './Button';
+import { Button, ButtonSize, ButtonTheme } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { size } from 'lodash';
 
 export default {
     title: 'shared/Button',
@@ -29,4 +30,53 @@ export const Outlined = Template.bind({});
 Outlined.args = {
     children: 'Text',
     theme: ButtonTheme.OUTLINE
+}
+
+export const OutlinedSizeL = Template.bind({});
+OutlinedSizeL.args = {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.L
+}
+
+export const OutlinedSizeXL = Template.bind({});
+OutlinedSizeXL.args = {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.XL
+}
+
+export const Background = Template.bind({});
+Background.args = {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND
+}
+
+export const BackgroundInverted = Template.bind({});
+BackgroundInverted.args = {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED
+}
+
+export const Square = Template.bind({});
+Square.args = {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true
+}
+
+export const SquareSizeL = Template.bind({});
+SquareSizeL.args = {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.L
+}
+
+export const SquareSizeXL = Template.bind({});
+SquareSizeXL.args = {
+    children: '>',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.XL
 }
