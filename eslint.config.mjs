@@ -9,12 +9,12 @@ import i18next from "eslint-plugin-i18next";
 export default [
     { 
         languageOptions: { 
-        parserOptions: { 
-            ecmaFeatures: { 
-                jsx: true 
-            }, 
-            sourceType: "module", 
-            ecmaVersion: 2020 
+            parserOptions: { 
+                ecmaFeatures: { 
+                    jsx: true 
+                }, 
+                sourceType: "module", 
+                ecmaVersion: 2020 
             } 
         }
     },
@@ -23,7 +23,7 @@ export default [
     ...tseslint.configs.recommended,
     pluginReactConfig,
     {
-        ignores: ["dist/**/*"],
+        ignores: ["dist/**/*", "scripts/*.js"],
         files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
         settings: {
             version: "detect",
