@@ -5,6 +5,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 import i18next from "eslint-plugin-i18next";
+import * as reactHooks from "eslint-plugin-react-hooks"
 
 export default [
     { 
@@ -32,6 +33,7 @@ export default [
             "typescript-eslint": typescriptEslint,
             "eslint-plugin-react": react,
             i18next,
+            "react-hooks": reactHooks
         },
         rules: {
             "react/jsx-indent": [2, 4],
