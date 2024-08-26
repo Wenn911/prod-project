@@ -1,6 +1,9 @@
 import path from "path";
 
 export default {
+    globals: {
+        __IS_DEV__: true
+    },
     clearMocks: true,
     coveragePathIgnorePatterns: [
         "\\\\node_modules\\\\"
@@ -59,8 +62,6 @@ export default {
     // globalSetup: undefined,
 
     // globalTeardown: undefined,
-
-    // globals: {},
 
     // maxWorkers: "50%",
 
