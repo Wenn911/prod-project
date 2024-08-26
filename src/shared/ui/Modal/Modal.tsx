@@ -2,6 +2,7 @@ import { FC, ReactNode, useCallback, useEffect, useRef, useState } from "react"
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from './Modal.module.scss';
 import { Portal } from "../Portal/Portal";
+import { useTheme } from "app/providers/ThemeProvider";
 
 interface Props {
     className?: string;
@@ -17,6 +18,7 @@ export const Modal: FC<Props> = (props) => {
 
     const [isClosing, setClosing] = useState<boolean>(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
+    const { theme } = useTheme()
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
@@ -56,7 +58,7 @@ export const Modal: FC<Props> = (props) => {
 
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className])}>
+            <div className={classNames(cls.Modal, mods, [className, theme])}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div className={cls.content} onClick={onContentClick}>
                         {children}
