@@ -1,8 +1,12 @@
 {
   "Language": "English",
+  "About": "About us",
+  "Main": "Main",
   "Page is not found": "Page is not found",
   "Something went wrong": "Something went wrong.",
   "Reload": "Reload page",
   "ShortLang": "EN",
-  "Sign in": "Sign in"
+  "Sign in": "Sign in",
+  "Enter username": "Enter username",
+  "Enter password": "Enter password"
 }

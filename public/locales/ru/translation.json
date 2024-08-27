@@ -1,8 +1,12 @@
 {
   "Language": "Русский",
+  "Main": "Главная",
+  "About": "О сайте",
   "Page is not found": "Страница не найдена",
   "Something went wrong": "Что-то пошло не так.",
   "Reload": "Перезагрузить",
   "ShortLang": "РУ",
-  "Sign in": "Войти"
+  "Sign in": "Войти",
+  "Enter username": "Введите имя",
+  "Enter password": "Введите пароль"
 }

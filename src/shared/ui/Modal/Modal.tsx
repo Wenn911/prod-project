@@ -8,17 +8,25 @@ interface Props {
     className?: string;
     children?: ReactNode;
     isOpen: boolean;
-    onClose: () => void
+    onClose: () => void;
+    lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal: FC<Props> = (props) => {
-    const { children, className, isOpen, onClose } = props;
+    const { children, className, isOpen = false, onClose, lazy } = props;
 
     const [isClosing, setClosing] = useState<boolean>(false);
+    const [isMounted, setMounted] = useState<boolean>(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
     const { theme } = useTheme()
+
+    useEffect(() => {
+        if (isOpen){
+            setMounted(true)
+        }
+    }, [isOpen])
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
@@ -55,10 +63,12 @@ export const Modal: FC<Props> = (props) => {
     const onContentClick = (e: React.MouseEvent) => {
         e.stopPropagation()
     }
-
+    if (lazy && !isMounted) {
+        return null;
+    }
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className, theme])}>
+            <div className={classNames(cls.Modal, mods, [className, theme, 'app-modal'])}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div className={cls.content} onClick={onContentClick}>
                         {children}
