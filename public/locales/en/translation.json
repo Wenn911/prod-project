@@ -8,5 +8,8 @@
   "ShortLang": "EN",
   "Sign in": "Sign in",
   "Enter username": "Enter username",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Authorization": "Authorization",
+  "Uncorrect username or password": "Uncorrect username or password",
+  "Logout": "Logout"
 }
