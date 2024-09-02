@@ -44,7 +44,14 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
             <Button onClick={onOpenModal} theme={ButtonTheme.CLEAR_INVERTED} className={classNames(cls.links)}>
                 {t("Sign in")}
             </Button>
-            <LoginModal isOpen={isAuthModal} onClose={onCloseModal}>123</LoginModal>
+            {isAuthModal && 
+            <LoginModal 
+                isOpen={isAuthModal} 
+                onClose={onCloseModal}
+            >
+                123
+            </LoginModal>
+            }
         </div>
     );
 };
