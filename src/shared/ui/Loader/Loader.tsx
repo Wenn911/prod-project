@@ -1,13 +1,13 @@
-import { FC } from "react"
+import { memo } from "react"
 import { classNames } from "shared/lib/classNames/classNames"
 import './Loader.scss'
 
 interface Props {
-className?: string;
+    className?: string;
 }
 
-export const Loader: FC<Props> = ({ className }) => {
+export const Loader = memo(({ className }: Props) => {
     return <div className={classNames('loader', {}, [className])} />
     
-};
+});
 

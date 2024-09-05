@@ -2,6 +2,7 @@ import { configureStore, DeepPartial, ReducersMapObject } from '@reduxjs/toolkit
 import { StateSchema } from './StateSchema';
 import { counterReducer, userReducer } from 'entities';
 import { createReducerManager } from './reducerManager';
+import { useDispatch } from 'react-redux';
 
 export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) {
     const rootReducer: ReducersMapObject<StateSchema> = {
@@ -23,3 +24,5 @@ export function createReduxStore(initialState?: StateSchema, asyncReducers?: Red
 
     return store
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

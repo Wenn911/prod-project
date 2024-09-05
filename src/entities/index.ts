@@ -4,6 +4,20 @@ import { counterReducer } from "./Counter/model/slice/counterSlice";
 import { userReducer, userActions } from './User/model/slice/userSlice'
 import { IUser, UserSchema } from './User/model/types/user'
 import { getUserAuthData } from "./User/model/selectors/getUserAuthData";
+import { profileActions, profileReducer } from "./Profile/model/slice/profileSlice";
+import { IProfile, ProfileSchema } from "./Profile/model/types/profile";
 
-
-export { CounterSchema, Counter, counterReducer, userReducer, userActions, IUser, UserSchema, getUserAuthData };
+export { 
+    CounterSchema, 
+    Counter, 
+    counterReducer, 
+    userReducer, 
+    userActions, 
+    IUser, 
+    UserSchema, 
+    getUserAuthData,
+    IProfile, 
+    ProfileSchema, 
+    profileActions, 
+    profileReducer
+};
