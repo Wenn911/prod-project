@@ -13,7 +13,7 @@ interface Props extends HTMLInputProps {
 
 export const Input = memo((props: Props) => {
     const { className, value, onChange, type = 'text', placeholder, autoFocus, ...otherProps } = props;
-    const ref = useRef<HTMLInputElement>()
+    const ref = useRef<HTMLInputElement>(null)
 
     const [isFocused, setFocused] = useState(false)
     const [carriagePos, setCarriagePos] = useState(0)

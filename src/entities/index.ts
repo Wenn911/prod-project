@@ -6,6 +6,8 @@ import { IUser, UserSchema } from './User/model/types/user'
 import { getUserAuthData } from "./User/model/selectors/getUserAuthData";
 import { profileActions, profileReducer } from "./Profile/model/slice/profileSlice";
 import { IProfile, ProfileSchema } from "./Profile/model/types/profile";
+import { fetchProfileData } from "./Profile/model/services/fetchProfileData/fetchProfileData";
+import { ProfileCard } from './Profile/ui/ProfileCard/ProfileCard';
 
 export { 
     CounterSchema, 
@@ -19,5 +21,7 @@ export {
     IProfile, 
     ProfileSchema, 
     profileActions, 
-    profileReducer
+    profileReducer,
+    fetchProfileData,
+    ProfileCard
 };

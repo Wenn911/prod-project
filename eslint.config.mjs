@@ -56,6 +56,7 @@ export default [
             "import/no-extraneous-dependencies": "off",
             "no-underscore-dangle": "off",
             "@typescript-eslint/no-unused-vars": 'warn',
+            "@typescript-eslint/no-explicit-any": "warn",
         },
     },
 ];
