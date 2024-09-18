@@ -1,27 +1,43 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
   "profile": {
-    "firstName": "Kate",
-    "lastName": "Chel",
-    "age": 22,
-    "currency": "RUB",
+    "firstName": "Nikita231",
+    "lastName": "Karalus",
+    "age": 12,
+    "currency": "EUR",
     "country": "Russia",
-    "city": "Moscow",
-    "username": "PipkaChel",
-    "avatar": ""
+    "city": "Saint-Petersburg",
+    "username": "Karaluga",
+    "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
   },
   "users": [
     {
-        "id": "1",
-        "username": "admin",
-        "password": "123"
+      "id": "1",
+      "username": "admin",
+      "password": "123"
     }
-]
+  ]
 }

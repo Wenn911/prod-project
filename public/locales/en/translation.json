@@ -12,5 +12,7 @@
   "Authorization": "Authorization",
   "Uncorrect username or password": "Uncorrect username or password",
   "Logout": "Logout",
-  "Profile": "Profile"
+  "Profile": "Profile",
+  "Select currency": "Select currency",
+  "Select country": "Select country"
 }

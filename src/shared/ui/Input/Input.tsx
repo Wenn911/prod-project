@@ -1,18 +1,28 @@
 import { ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef, useState } from "react"
-import { classNames } from "shared/lib/classNames/classNames"
+import { classNames, Mods } from "shared/lib/classNames/classNames"
 import cls from "./Input.module.scss";
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 
 interface Props extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value?: string | number;
     onChange?: (value: string) => void;
     autoFocus?: boolean;
+    readOnly?: boolean;
 }
 
 export const Input = memo((props: Props) => {
-    const { className, value, onChange, type = 'text', placeholder, autoFocus, ...otherProps } = props;
+    const { 
+        className,
+        value,
+        onChange,
+        type = 'text',
+        placeholder,
+        autoFocus,
+        readOnly,
+        ...otherProps
+    } = props;
     const ref = useRef<HTMLInputElement>(null)
 
     const [isFocused, setFocused] = useState(false)
@@ -42,22 +52,34 @@ export const Input = memo((props: Props) => {
         setCarriagePos(e.target?.selectionStart || 0)
     }
 
+    const mods: Mods = {
+        [cls.readonly]: readOnly
+    }
+
     return (
         <div className={classNames(cls.InputWrapper, {}, [className])}>
             {placeholder && <div className={classNames(cls.placeholder)}>{`${placeholder}>`}</div>}
             <div className={classNames(cls.carriageWrapper)}>
                 <input 
                     ref={ref}
-                    className={classNames(cls.input, {}, [className])}
+                    className={classNames(cls.input, {}, [])}
                     type={type} 
                     value={value}
                     onChange={onChangeHandler}
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onSelect={onSelect}
+                    readOnly={readOnly}
                     {...otherProps}
                 />
-                {isFocused && <span style={{ left: `${carriagePos * 9}px` }} className={classNames(cls.carriage)} />}
+                {
+                    !readOnly && 
+                    isFocused && 
+                    <span 
+                        style={{ left: `${carriagePos * 9}px` }} 
+                        className={classNames(cls.carriage)} 
+                    />
+                }
             </div>
         </div>
     )
