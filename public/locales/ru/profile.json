@@ -10,5 +10,10 @@
   "Your age": "Ваш возраст",
   "Your city": "Ваш город",
   "Your username": "Ваше имя пользователя",
-  "Your avatar": "Ваш аватар"
+  "Your avatar": "Ваш аватар",
+  "Incorrect age": "Неверный возраст",
+  "Incorrect country": "Неверно выбрана страна",
+  "Incorrect user data": "Неверные данные пользователя",
+  "Server error": "Ошибка сервера",
+  "Empty data": "Заполните поля"
 }
