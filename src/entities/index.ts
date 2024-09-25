@@ -14,6 +14,7 @@ import { updateProfileData } from "./Profile/model/services/updateProfileData/up
 import { getProfileError } from "./Profile/model/selectors/getProfileError/getProfileError";
 import { getProfileLoading } from "./Profile/model/selectors/getProfileLoading/getProfileLoading";
 import { getProfileValidateErrors } from "./Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors";
+import { getUserInited } from "./User/model/selectors/getUserInited";
 
 export * from './Currency/model/types/currency';
 export * from './Currency/ui/CurrencySelect';
@@ -41,5 +42,6 @@ export {
     getProfileLoading,
     updateProfileData,
     getProfileValidateErrors,
-    ValidateProfileError
+    ValidateProfileError,
+    getUserInited
 };
