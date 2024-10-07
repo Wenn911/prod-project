@@ -15,5 +15,7 @@
   "Profile": "Profile",
   "Select currency": "Select currency",
   "Select country": "Select country",
-  "Articles": "Articles"
+  "Articles": "Articles",
+  "Article not found": "Article not found",
+  "There was an error loading the article": "There was an error loading the article"
 }

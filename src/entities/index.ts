@@ -15,6 +15,10 @@ import { getProfileError } from "./Profile/model/selectors/getProfileError/getPr
 import { getProfileLoading } from "./Profile/model/selectors/getProfileLoading/getProfileLoading";
 import { getProfileValidateErrors } from "./Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors";
 import { getUserInited } from "./User/model/selectors/getUserInited";
+import { ArticleDetails } from "./Article/ui/ArticleDetails/ArticleDetails";
+import { Article } from "./Article/model/types/article";
+import { ArticleDetailsSchema } from "./Article/model/types/articleDetailsSchema";
+
 
 export * from './Currency/model/types/currency';
 export * from './Currency/ui/CurrencySelect';
@@ -43,5 +47,8 @@ export {
     updateProfileData,
     getProfileValidateErrors,
     ValidateProfileError,
-    getUserInited
+    getUserInited,
+    ArticleDetails,
+    Article,
+    ArticleDetailsSchema
 };
