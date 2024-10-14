@@ -40,6 +40,7 @@ export interface Article {
     subtitle: string;
     image: string;
     createdAt: string;
+    views: number;
     type: ArticleType[];
     blocks: ArticleBlock[];
 }

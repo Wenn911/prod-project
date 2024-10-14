@@ -16,8 +16,9 @@ import { getProfileLoading } from "./Profile/model/selectors/getProfileLoading/g
 import { getProfileValidateErrors } from "./Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors";
 import { getUserInited } from "./User/model/selectors/getUserInited";
 import { ArticleDetails } from "./Article/ui/ArticleDetails/ArticleDetails";
-import { Article } from "./Article/model/types/article";
+import { Article, ArticleBlockType, ArticleType } from "./Article/model/types/article";
 import { ArticleDetailsSchema } from "./Article/model/types/articleDetailsSchema";
+import { articleDetailsReducer } from "./Article/model/slice/articleDetailsSlice";
 
 
 export * from './Currency/model/types/currency';
@@ -50,5 +51,8 @@ export {
     getUserInited,
     ArticleDetails,
     Article,
-    ArticleDetailsSchema
+    ArticleDetailsSchema,
+    articleDetailsReducer,
+    ArticleType,
+    ArticleBlockType
 };
