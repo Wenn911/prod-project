@@ -3,6 +3,7 @@ import { AxiosInstance } from "axios";
 import { ArticleDetailsSchema, CounterSchema, UserSchema } from "entities";
 import { ProfileSchema } from "entities";
 import { LoginSchema } from "features/AuthByUsername";
+import { ArticleDetailCommentsSchema } from "pages/ArticleDetailPage";
 import { To, NavigateOptions } from "react-router-dom";
 
 export interface StateSchema {
@@ -13,6 +14,7 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
+    articleDetailsComments?: ArticleDetailCommentsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

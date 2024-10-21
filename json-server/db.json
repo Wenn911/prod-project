@@ -99,13 +99,17 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
+
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
+
     }
   ],
 
