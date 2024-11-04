@@ -9,6 +9,7 @@ export enum ValidateProfileError {
 }
 
 export interface IProfile {
+    id?: string;
     firstName?: string;
     lastName?: string;
     age?: number;
@@ -20,6 +21,7 @@ export interface IProfile {
 }
 
 export interface ProfileSchema {
+    id?: string;
     data?: IProfile;
     form?: IProfile;
     isLoading: boolean;

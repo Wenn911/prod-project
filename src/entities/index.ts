@@ -21,6 +21,8 @@ import { ArticleDetailsSchema } from "./Article/model/types/articleDetailsSchema
 import { articleDetailsReducer } from "./Article/model/slice/articleDetailsSlice";
 import { CommentList } from "./Comment/ui/CommentList/CommentList";
 import { Comment } from "./Comment/model/types/comment";
+import { getArticleDetailsData } from "./Article/model/selectors/articleDetails";
+import { getProfileData } from "./Profile/model/selectors/getProfileData/getProfileData";
 
 
 export * from './Currency/model/types/currency';
@@ -58,5 +60,7 @@ export {
     ArticleType,
     ArticleBlockType,
     CommentList,
-    Comment
+    Comment,
+    getArticleDetailsData,
+    getProfileData
 };

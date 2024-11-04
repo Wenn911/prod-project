@@ -11,7 +11,6 @@
       "views": 200
     }
   ],
-
   "articles": [
     {
       "id": "1",
@@ -20,7 +19,9 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
       "views": 1022,
       "createdAt": "30.09.2024",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": 1,
@@ -58,7 +59,7 @@
             "paragraph 3"
           ]
         },
-         {
+        {
           "id": 6,
           "type": "IMAGE",
           "title": "a image title",
@@ -72,7 +73,6 @@
       "views": 200
     }
   ],
-
   "comments": [
     {
       "id": "1",
@@ -91,9 +91,32 @@
       "text": "a comment about post 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "c7FNeLX"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "1",
+      "id": "G9twxpA"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "lqIilHh"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "11",
+      "id": "7nF_jMH"
     }
   ],
-
   "users": [
     {
       "id": "1",
@@ -101,7 +124,6 @@
       "password": "123",
       "role": "ADMIN",
       "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
-
     },
     {
       "id": "2",
@@ -109,18 +131,30 @@
       "password": "123",
       "role": "USER",
       "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
-
     }
   ],
-
-  "profile": {
-    "firstName": "Nikita",
-    "lastName": "Karalus",
-    "age": 12,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "Saint-Petersburg",
-    "username": "Karaluga",
-    "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstName": "Nikita",
+      "lastName": "Karalus",
+      "age": 12,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Saint-Petersburg",
+      "username": "Karaluga",
+      "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
+    },
+    {
+      "id": "2",
+      "firstName": "Nikitik",
+      "lastName": "Karalus",
+      "age": 21,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Saint-Petersburg",
+      "username": "Karablik",
+      "avatar": "https://img.freepik.com/premium-photo/3d-emoticon-render-image-cooler-yellow-emoji-with-sunglasses_477250-4.jpg"
+    }
+  ]
 }
